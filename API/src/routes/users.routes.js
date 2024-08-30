@@ -17,7 +17,7 @@ const usersController = new UsersController()
 
 usersRouter.get("/:id", usersController.show)
 usersRouter.post("/", usersController.create)
-usersRouter.put("/", ensureAuthenticated, usersController.update)
+usersRouter.put("/:id", ensureAuthenticated, usersController.update)
 usersRouter.delete("/:id", ensureAuthenticated, ensureAdmin, usersController.delete)
 
 module.exports = usersRouter

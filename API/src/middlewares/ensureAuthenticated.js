@@ -4,6 +4,7 @@ const AppError = require('../utils/AppError');
 async function ensureAuthenticated(request, response, next) {
   const authHeader = request.headers.authorization;
 
+  // console.log(`authHeader: ${authHeader}`);
   if (!authHeader) {
     throw new AppError('JWT token not provided', 401);
   }
@@ -16,7 +17,7 @@ async function ensureAuthenticated(request, response, next) {
     // console.log(decoded);
     request.user = {
         id: decoded.userId,
-        isAdmin: decoded.isAdmin === 1 ? true : false, // or permissions: decoded.permissions
+        role: decoded.role, // or permissions: decoded.permissions
       };
 
     return next();

@@ -5,20 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe77f08-2e6d-443e-8351-df0f2a3be814" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99/storage_v2/_src_/schema/main.uQUzAA.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/nunesports_site.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/private.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/public.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/src/database/database.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/src/middlewares/ensureAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/src/routes/sessions.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/src/routes/users.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/src/controllers/productImgController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/src/controllers/productsController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/src/routes/products.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/tmp/0aa3a81b8d8b0ad771a4-24838c78-0eef-47eb-b417-e047491e1370.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/tmp/1e6258c8aa2b25549d62-24838c78-0eef-47eb-b417-e047491e1370.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/tmp/2cd22ef6070bf1dcc881-24838c78-0eef-47eb-b417-e047491e1370.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/tmp/3f6129bc4dd7a97249f0-24838c78-0eef-47eb-b417-e047491e1370.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99/storage_v2/_src_/schema/main.uQUzAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6d18aba3-9701-4566-8ad6-2f14e61ddc99/storage_v2/_src_/schema/main.uQUzAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/controllers/sessionsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/controllers/sessionsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/controllers/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/controllers/usersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/database/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/database/knex/migrations/20240830134249_create_products.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/database/knex/migrations/20240830134249_create_products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/middlewares/ensureAuthenticated.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/middlewares/ensureAuthenticated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/providers/diskStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/providers/diskStorage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/routes/users.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/routes/users.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

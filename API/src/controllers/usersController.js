@@ -30,23 +30,13 @@ class UsersController {
         }
 
         // validate role
-        if(!role || (role !== 'admin' && role !== 'user')) {
-            throw new AppError('Invalid role', 400)
+        if (role) {
+            if(role !== 'admin' && role !== 'user') {
+                throw new AppError('Invalid role', 400)
+            }
         }
 
         return res.status(201).json(user)
-    }
-
-    async show(req, res) {
-        const { id } = req.params
-
-        const user = await knex('Users').where({ id }).first()
-
-        if (!user) {
-            throw new AppError('User not found', 404)
-        }
-
-        return res.json(user)
     }
 
     async update(req, res) {
@@ -107,7 +97,7 @@ class UsersController {
 
         await knex("Users").where({ id }).update({ name:user.name, email:user.email, password:user.password, role:user.role, updated_at: knex.fn.now() });
 
-        return response.json(user)
+        return res.json(user)
     }
 
     async delete(req, res) {
@@ -122,6 +112,18 @@ class UsersController {
         await knex('Users').where({ id }).delete()
 
         return res.json({ message: 'User deleted successfully' })
+    }
+
+    async show(req, res) {
+        const { id } = req.params
+
+        const user = await knex('Users').where({ id }).first()
+
+        if (!user) {
+            throw new AppError('User not found', 404)
+        }
+
+        return res.json(user)
     }
 }
 

@@ -499,7 +499,7 @@
     </routine>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-30.14:13:06</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-30.15:44:57</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1600,7 +1600,7 @@
     <table id="560" parent="191" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="561" parent="555" name="id">
+    <column id="561" parent="555" name="code">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
@@ -1611,153 +1611,147 @@
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="563" parent="555" name="code">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="563" parent="555" name="description">
+      <DasType>varchar(160)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="564" parent="555" name="description">
-      <DasType>varchar(255)|0s</DasType>
+    <column id="564" parent="555" name="price">
+      <DasType>float|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="565" parent="555" name="price">
-      <DasType>float|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="566" parent="555" name="img_src">
+    <column id="565" parent="555" name="img_src">
       <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
-      <Position>6</Position>
+      <Position>5</Position>
     </column>
-    <column id="567" parent="555" name="created_at">
+    <column id="566" parent="555" name="created_at">
       <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="567" parent="555" name="updated_at">
+      <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="568" parent="555" name="updated_at">
-      <DasType>datetime|0s</DasType>
-      <Position>8</Position>
-    </column>
-    <key id="569" parent="555">
-      <ColNames>id</ColNames>
+    <key id="568" parent="555">
+      <ColNames>code</ColNames>
       <Primary>1</Primary>
     </key>
-    <trigger id="570" parent="555" name="update_products_timestamp">
+    <trigger id="569" parent="555" name="update_products_timestamp">
       <Events>U</Events>
-      <SourceTextLength>301</SourceTextLength>
+      <SourceTextLength>305</SourceTextLength>
       <Turn>before-row</Turn>
     </trigger>
-    <column id="571" parent="556" name="id">
+    <column id="570" parent="556" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="572" parent="556" name="name">
+    <column id="571" parent="556" name="name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="573" parent="556" name="email">
+    <column id="572" parent="556" name="email">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="574" parent="556" name="password">
+    <column id="573" parent="556" name="password">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="575" parent="556" name="role">
+    <column id="574" parent="556" name="role">
       <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>&apos;user&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
-    <column id="576" parent="556" name="avatar">
+    <column id="575" parent="556" name="avatar">
       <DasType>varchar(255)|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
       <Position>6</Position>
     </column>
-    <column id="577" parent="556" name="created_at">
+    <column id="576" parent="556" name="created_at">
       <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>7</Position>
     </column>
-    <column id="578" parent="556" name="updated_at">
+    <column id="577" parent="556" name="updated_at">
       <DasType>datetime|0s</DasType>
       <Position>8</Position>
     </column>
-    <key id="579" parent="556">
+    <key id="578" parent="556">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <trigger id="580" parent="556" name="update_users_timestamp">
+    <trigger id="579" parent="556" name="update_users_timestamp">
       <Events>U</Events>
       <SourceTextLength>200</SourceTextLength>
       <Turn>before-row</Turn>
     </trigger>
-    <column id="581" parent="557" name="id">
+    <column id="580" parent="557" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="582" parent="557" name="name">
+    <column id="581" parent="557" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="583" parent="557" name="batch">
+    <column id="582" parent="557" name="batch">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="584" parent="557" name="migration_time">
+    <column id="583" parent="557" name="migration_time">
       <DasType>datetime|0s</DasType>
       <Position>4</Position>
     </column>
-    <key id="585" parent="557">
+    <key id="584" parent="557">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="586" parent="558" name="index">
+    <column id="585" parent="558" name="index">
       <AutoIncrement>1</AutoIncrement>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="587" parent="558" name="is_locked">
+    <column id="586" parent="558" name="is_locked">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
     </column>
-    <key id="588" parent="558">
+    <key id="587" parent="558">
       <ColNames>index</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="589" parent="559" name="type">
+    <column id="588" parent="559" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="590" parent="559" name="name">
+    <column id="589" parent="559" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="591" parent="559" name="tbl_name">
+    <column id="590" parent="559" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="592" parent="559" name="rootpage">
+    <column id="591" parent="559" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="593" parent="559" name="sql">
+    <column id="592" parent="559" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="594" parent="560" name="name">
+    <column id="593" parent="560" name="name">
       <Position>1</Position>
     </column>
-    <column id="595" parent="560" name="seq">
+    <column id="594" parent="560" name="seq">
       <Position>2</Position>
     </column>
   </database-model>

@@ -22,7 +22,7 @@ class SessionsController {
 
     console.log(`user id on sessionsController: ${user.id}`)
 
-    const token = signToken({ userId: String(user.id), isAdmin: user.isAdmin })
+    const token = signToken({ userId: String(user.id), role: user.role })
 
     return response.json({ id:user.id, token })
   }
