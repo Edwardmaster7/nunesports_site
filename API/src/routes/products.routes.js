@@ -12,16 +12,20 @@ const upload = multer(uploadConfig.MULTER)
 
 // Middlewares
 const ensureAdmin = require('../middlewares/ensureAdmin')
+const ensureAuthenticated = require('../middlewares/ensureAuthenticated')
+
+// Products routes
 
 const productsRouter = Router()
 
 productsRouter.get('/', productsController.index)
 productsRouter.get('/:code', productsController.show)
-productsRouter.post('/', ensureAdmin, productsController.create)
-productsRouter.put('/:code', ensureAdmin, productsController.update)
-productsRouter.delete('/:code', ensureAdmin, productsController.delete)
+productsRouter.post('/', ensureAuthenticated, ensureAdmin, productsController.create)
+productsRouter.put('/:code', ensureAuthenticated, ensureAdmin, productsController.update)
+productsRouter.delete('/:code', ensureAuthenticated, ensureAdmin, productsController.delete)
+
 
 // Upload image for product
-productsRouter.patch("/img/:code", upload.single("img"), ensureAdmin, productImgController.update)
+productsRouter.patch("/img/:code", upload.single("img"), ensureAuthenticated, ensureAdmin, productImgController.update)
 
 module.exports = productsRouter

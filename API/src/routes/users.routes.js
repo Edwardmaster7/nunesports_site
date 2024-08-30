@@ -7,7 +7,7 @@ const UsersController = require("../controllers/usersController.js")
 // const UserAvatarController = require("../controllers/userAvatarController")
 
 const ensureAuthenticated = require("../middlewares/ensureAuthenticated")
-const ensureAdmin = require("../middlewares/ensureAdmin.js")
+const ensureAdmin = require("../middlewares/ensureAdmin")
 
 const usersRouter = Router()
 const upload = multer(uploadConfig.MULTER)

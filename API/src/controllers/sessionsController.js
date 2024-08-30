@@ -20,11 +20,11 @@ class SessionsController {
       throw new AppError("Email and/or password incorrect.", 401)
     }
 
-    console.log(`user id on sessionsController: ${user.id}`)
+    // console.log(`user id on sessionsController: ${user.id}`)
 
     const token = signToken({ userId: String(user.id), role: user.role })
 
-    return response.json({ id:user.id, token })
+    return response.json({ token, role:user.role})
   }
 }
 
