@@ -35,6 +35,8 @@ class UsersController {
                 throw new AppError('Invalid role', 400)
             }
         }
+        
+        await knex("Users").insert({name, email, password, role})
 
         return res.status(201).json(user)
     }
